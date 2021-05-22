@@ -1,0 +1,8 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        adictionary = {}
+        for i in range(len(nums)):
+                if nums[i] in adictionary: 
+                    return [adictionary[nums[i]],i]
+                else:
+                    adictionary[target - nums[i]] = i
